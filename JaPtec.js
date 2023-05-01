@@ -1,30 +1,30 @@
 function statusFinalDelEstudiante(nombre, apellido, departamento, puntajeFundamentosProgramacion, puntajeEvaluacionImperativa,
     puntajeEvaluacionProgOrientadaAObjetos, evidenciaEvaluacionFundamentos, evidenciaEvaluacionImperativa, evidenciaProgOrientadaAObjetos,
-    puntajePromedioIngles, puntajeEnLeccionesDeCT) {
+    puntajePromedioIngles, cantidadLeccionesDeCT) {
 
-        let puntajeEvaluaciones = (puntajeEvaluacionImperativa * 0.5) + (puntajeFundamentosProgramacion * 0.3) + (puntajeEvaluacionProgOrientadaAObjetos * 0.2);
-        let cantidadEvidencias = evidenciaEvaluacionFundamentos + evidenciaEvaluacionImperativa + evidenciaProgOrientadaAObjetos;
+    let puntajeEvaluaciones = (puntajeEvaluacionImperativa * 0.5) + (puntajeFundamentosProgramacion * 0.3) + (puntajeEvaluacionProgOrientadaAObjetos * 0.2);
+    let cantidadEvidencias = evidenciaEvaluacionFundamentos + evidenciaEvaluacionImperativa + evidenciaProgOrientadaAObjetos;
 
-        if (puntajePromedioIngles >= 50 && puntajeEnLeccionesDeCT === 100 && puntajeEvaluaciones >= 60 && cantidadEvidencias === 3) {
+    if (puntajePromedioIngles >= 50 && cantidadLeccionesDeCT === 10 && puntajeEvaluaciones >= 60 && cantidadEvidencias === 3) {
 
-                console.log(`Ubicación del estudiante: ${departamento} \n
+        console.log(`Ubicación del estudiante: ${departamento} \n
                 *********************************************************************** \n
                 Hola ${nombre} ${apellido}!!, espero que te encuentres bien, tu status final es el siguiente: \n
                 En inglés: ${puntajePromedioIngles} - Excelente \n
-                En CT: ${puntajeEnLeccionesDeCT} - Excelente \n
+                En CT: ${cantidadLeccionesDeCT}/10 completadas - Excelente \n
                 En Téc: ${puntajeEvaluaciones.toFixed(2)} - Excelente \n
                 Evidencias entregadas: ${cantidadEvidencias} - Excelente \n
                 En conclusión, tu status final es aprobado con ${puntajeEvaluaciones.toFixed(2)} Felicitaciones! \n
                 *********************************************************************** \n
                 `);
 
-        } else if (puntajePromedioIngles >= 50 && puntajeEnLeccionesDeCT === 100 && puntajeEvaluaciones >= 60 && cantidadEvidencias < 3) {
+    } else if (puntajePromedioIngles >= 50 && cantidadLeccionesDeCT === 10 && puntajeEvaluaciones >= 60 && cantidadEvidencias < 3) {
 
-            console.log(`Ubicación del estudiante: ${departamento} \n
+        console.log(`Ubicación del estudiante: ${departamento} \n
             *********************************************************************** \n
             Hola ${nombre} ${apellido}!!, espero que te encuentres bien, tu status final es el siguiente: \n
                 En inglés: ${puntajePromedioIngles} - Excelente \n
-                En CT: ${puntajeEnLeccionesDeCT} - Excelente \n
+                En CT: ${cantidadLeccionesDeCT}/10 completadas - Excelente \n
                 En Téc: ${puntajeEvaluaciones.toFixed(2)} - Excelente \n
                 Evidencias entregadas: ${cantidadEvidencias} - Insuficiente. \n
                 Tu puntaje final es ${puntajeEvaluaciones.toFixed(2)} lo cual está muy bien, pero deberás dar un examen. \n
@@ -33,13 +33,13 @@ function statusFinalDelEstudiante(nombre, apellido, departamento, puntajeFundame
                 *********************************************************************** \n
                 `);
 
-        } else if (puntajePromedioIngles >= 50 && puntajeEnLeccionesDeCT === 100 && puntajeEvaluaciones >= 50 && puntajeEvaluaciones < 60 && cantidadEvidencias === 3) {
+    } else if (puntajePromedioIngles >= 50 && cantidadLeccionesDeCT == 10 && puntajeEvaluaciones >= 50 && puntajeEvaluaciones < 60 && cantidadEvidencias === 3) {
 
-            console.log(`Ubicación del estudiante: ${departamento} \n
+        console.log(`Ubicación del estudiante: ${departamento} \n
             *********************************************************************** \n
             Hola ${nombre} ${apellido}!!, espero que te encuentres bien, tu status final es el siguiente: \n
             En inglés: ${puntajePromedioIngles} - Excelente \n
-            En CT: ${puntajeEnLeccionesDeCT} - Excelente \n
+            En CT: ${cantidadLeccionesDeCT}/10 completadas - Excelente \n
             En Téc: ${puntajeEvaluaciones.toFixed(2)} - Insuficiente \n
             Evidencias entregadas: ${cantidadEvidencias} - Excelente \n
             Dado que tu puntaje final es ${puntajeEvaluaciones.toFixed(2)} y entra en el rango de 50 - 59.99, deberás dar un examen
@@ -47,8 +47,8 @@ function statusFinalDelEstudiante(nombre, apellido, departamento, puntajeFundame
             *********************************************************************** \n
             `);
 
-        } else {
-            console.log(`Ubicación del estudiante: ${departamento} \n
+    } else {
+        console.log(`Ubicación del estudiante: ${departamento} \n
             *********************************************************************** \n
             Hola ${nombre} ${apellido}!, espero que te encuentres bien. \n 
             Debido al incumplimiento de los resultados esperados, no has aprobado la fase 1. \n
@@ -57,40 +57,40 @@ function statusFinalDelEstudiante(nombre, apellido, departamento, puntajeFundame
             Saludos cordiales. \n
             *********************************************************************** \n
             `);
-        };
+    };
 
 };
 
 // ***** ORDEN DE LOS PARÁMETROS *****
-// nombre                                                                               (string)
-// apellido                                                                             (string)
-// departamento                                                                         (string)
-// puntaje evaluacion Fundamentos de Programación                                       (int)
-// puntaje Programación Imperativa                                                      (int)
-// puntaje Programación Orientada a Objetos                                             (int)
-// si cargó o no la evidencia en la evaluación de Fundamentos de Programación           (boolean)
-// si cargó o no la evidencia en la evaluación de Programación Imperativa               (boolean)
-// si cargó o no la evidencia en la evaluación de Programación Orientada a Objetivos    (boolean)
-// su puntaje promedio en Inglés                                                        (int)
-// puntaje total de las 10 lecciones de CT                                              (int)
+// Nombre                                                                               (string)
+// Apellido                                                                             (string)
+// Departamento                                                                         (string)
+// Puntaje evaluacion Fundamentos de Programación                                       (int)
+// Puntaje Programación Imperativa                                                      (int)
+// Puntaje Programación Orientada a Objetos                                             (int)
+// Si cargó o no la evidencia en la evaluación de Fundamentos de Programación           (boolean)
+// Si cargó o no la evidencia en la evaluación de Programación Imperativa               (boolean)
+// Si cargó o no la evidencia en la evaluación de Programación Orientada a Objetivos    (boolean)
+// Su puntaje promedio en Inglés                                                        (int)
+// Cantidad de lecciones de CT hechas                                                   (int)
 
-// PRUEBA 1: El alumno aprueba ya que cumple con los resultados esperados.
-statusFinalDelEstudiante("Carlos", "Paez", "Maldonado", 70, 65, 62, true, true, true, 87, 100);
+// PRUEBA 1: El alumno tiene todo correcto.
+statusFinalDelEstudiante("Carlos", "Paez", "Maldonado", 70, 65, 62, true, true, true, 87, 10);
 
 // PRUEBA 2: El alumno tiene todo correcto, excepto la totalidad de las evidencias, por lo cual, deberá dar examen.
-statusFinalDelEstudiante("Esteban", "Gutierrez", "Montevideo", 75, 55, 27, true, false, true, 63, 100);
+statusFinalDelEstudiante("Esteban", "Gutierrez", "Montevideo", 75, 55, 57, true, false, true, 63, 10);
 
 // PRUEBA 3: El alumno tiene todo correcto, excepto la totalidad de las tutorías de CT
-statusFinalDelEstudiante("Jorge", "Da Silva", "Artigas", 85, 90, 74, true, true, true, 54, 95);
+statusFinalDelEstudiante("Jorge", "Da Silva", "Artigas", 85, 90, 74, true, true, true, 54, 9);
 
 // PRUEBA 4: El alumno tiene todo correcto, excepto 50% o más en inglés
-statusFinalDelEstudiante("Raúl", "Alves", "Rivera", 65, 72, 79, true, true, true, 47, 100);
+statusFinalDelEstudiante("Raúl", "Alves", "Rivera", 65, 72, 79, true, true, true, 47, 10);
 
 // PRUEBA 5: El alumno tiene todo correcto, excepto que tiene entre 50 y 59.99% puntaje en CREA Téc. Por lo cual, deberá dar examen.
-statusFinalDelEstudiante("Anaclara", "Olivera", "Canelones", 47, 65, 36, true, true, true, 58, 100);
+statusFinalDelEstudiante("Anaclara", "Olivera", "Canelones", 47, 65, 36, true, true, true, 58, 10);
 
 // PRUEBA 6: El alumno no cumple con ninguno de los resultados esperados.
-statusFinalDelEstudiante("Blanca", "Smith", "Paysandú", 45, 25, 27, true, false, false, 37, 60);
+statusFinalDelEstudiante("Blanca", "Smith", "Paysandú", 45, 25, 27, true, false, false, 37, 6);
 
 /* 
 Integrantes del equipo:
