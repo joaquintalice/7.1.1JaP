@@ -65,13 +65,13 @@ function statusFinalDelEstudiante(nombre, apellido, departamento, puntajeFundame
 // Nombre                                                                               (string)
 // Apellido                                                                             (string)
 // Departamento                                                                         (string)
-// Puntaje evaluacion Fundamentos de Programación                                       (int)
-// Puntaje Programación Imperativa                                                      (int)
-// Puntaje Programación Orientada a Objetos                                             (int)
+// Puntaje evaluacion Fundamentos de Programación                                       (int/float)
+// Puntaje Programación Imperativa                                                      (int/float)
+// Puntaje Programación Orientada a Objetos                                             (int/float)
 // Si cargó o no la evidencia en la evaluación de Fundamentos de Programación           (boolean)
 // Si cargó o no la evidencia en la evaluación de Programación Imperativa               (boolean)
 // Si cargó o no la evidencia en la evaluación de Programación Orientada a Objetivos    (boolean)
-// Su puntaje promedio en Inglés                                                        (int)
+// Su puntaje promedio en Inglés                                                        (int/float)
 // Cantidad de lecciones de CT hechas                                                   (int)
 
 // PRUEBA 1: El alumno tiene todo correcto.
